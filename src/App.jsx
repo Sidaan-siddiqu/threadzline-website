@@ -96,9 +96,21 @@ const navLinks = [
 ];
 
 const workVideos = [
-  { title: "Bulk Stitching in Action",src: "/videos/threadzline-work-1.mp4"},
-  { title: "Inside Our Stitching Unit",src: "/videos/threadzline-work-2.mp4"},
-  { title: "A Closer Look at Our Work", src: "/videos/threadzline-work-3.mp4" },
+  {
+    title: "Bulk Stitching in Action",
+    src: "/videos/threadzline-work-1.mp4",
+    poster: "/videos/threadzline-work-1.jpg",
+  },
+  {
+    title: "Inside Our Stitching Unit",
+    src: "/videos/threadzline-work-2.mp4",
+    poster: "/videos/threadzline-work-2.jpg",
+  },
+  {
+    title: "A Closer Look at Our Work",
+    src: "/videos/threadzline-work-3.mp4",
+    poster: "/videos/threadzline-work-3.jpg",
+  },
 ];
 
 function App() {
@@ -360,7 +372,7 @@ function App() {
           <div className="work-video-grid">
             {workVideos.map((video) => (
               <article className="work-video-card" key={video.src}>
-                <video controls preload="metadata" playsInline>
+                <video controls preload="metadata" playsInline poster={video.poster}>
                   <source src={video.src} type="video/mp4" />
                   Your browser does not support HTML video.
                 </video>
